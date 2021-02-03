@@ -24,8 +24,9 @@
         @endforeach
         </select>
     
-        <br> <br>
+        <br> 
         <button type="submit" class="btn btn-primary">Registrar </button>
 
     </form>
+    <br>
 @stop

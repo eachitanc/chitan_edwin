@@ -38,18 +38,19 @@ class AdminController extends Controller
 
     public function upformLibro($id){
         $libro = Libro::findOrFail($id);
-        $edit = Editorial::all();
-        return view ('actualizar.actualizar_libro', compact('libro','edit'));
+        $editorial = Editorial::all();
+        return view ('actualizar.actualizar_libro', compact('libro','editorial'));
     }
 
     public function upExito(Request $request){
-        $libro = new Libro();
-        $libro->ISBN = $request->input('txtisbn');
-        $libro->titulo = $request->input('txtTitulo');
-        $libro->precio = $request->input('txtPrecio');
-        $libro->stock = $request->input('txtStock');
-        $libro->id_editorial = $request->input('slceditorial');
-        $libro->save();
+        $l = $request->input('txtIdLib');
+        $lib = Libro::find("$l");
+        $lib -> ISBN = $request->input('txtisbnUp');
+        $lib -> titulo = $request->input('txtTituloUp');
+        $lib -> precio = $request->input('txtPrecioUp');
+        $lib -> stock = $request->input('txtStockUp');
+        $lib -> id_editorial = $request->input('slceditorialUp');
+        $lib -> save(); 
         return redirect()->route('libros');  
     }
 }
