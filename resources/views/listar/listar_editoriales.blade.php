@@ -1,7 +1,7 @@
 @extends('master')
     @section('contenido')
     <br>
-    <h2 align="center"> Listado de Editoriales </h1> <br>
+    <h2 align="center"> Listado de Editoriales </h2> <br>
 
     <table class="table" border='2'>
         <thead>

@@ -18,3 +18,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [InicioController::class, 'getIndex'])->name('home');
 Route::get('/libros', [AdminController::class, 'getLibros'])->name('libros');
 Route::get('/editoriales', [AdminController::class, 'getEditorial'])->name('editoriales');
+Route::get('/actualizar/libros/{id}', [AdminController::class, 'upformLibro'])->name('formUpLibro');
+Route::get('/registrar/libros', [AdminController::class, 'regLibro'])->name('formRegistrarLibro');
+Route::post('/registrar/libro/exito', [AdminController::class, 'regExito'])->name('regExitoso');
+Route::post('/actualizar/libro/exito', [AdminController::class, 'upExito'])->name('act_Exitosa');

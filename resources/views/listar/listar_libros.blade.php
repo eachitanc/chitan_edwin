@@ -1,7 +1,7 @@
 @extends('master')
     @section('contenido')
     <br>
-    <h2 align="center"> Listado de Libros </h1> <br>
+    <h2 align="center"> Listado de Libros </h2> <br>
 
     <table class="table" border='2'>
         <thead>
@@ -45,10 +45,10 @@
                         @endif
                         
                     </td>
-                    <td> <a href="#" class="btn btn-success">Actualizar</a></td>
+                    <td> <a name href="{{route('formUpLibro',$c->id)}}" class="btn btn-success">Actualizar</a></td>
                 </tr>
         @endforeach
         </tbody>
     </table   
-    <div><a href="#" class="btn btn-primary">Registrar</a></div>
+    <div><a href="{{route('formRegistrarLibro')}}" class="btn btn-primary">Registrar</a></div>
 @stop
