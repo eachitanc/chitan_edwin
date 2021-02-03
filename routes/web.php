@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InicioController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [InicioController::class, 'getIndex'])->name('home');
+Route::get('/libros', [AdminController::class, 'getLibros'])->name('libros');
+Route::get('/editoriales', [AdminController::class, 'getEditorial'])->name('editoriales');
