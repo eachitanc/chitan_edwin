@@ -49,6 +49,8 @@
                 </tr>
         @endforeach
         </tbody>
-    </table   
+    </table>
+    <br>   
     <div><a href="{{route('formRegistrarLibro')}}" class="btn btn-primary">Registrar</a></div>
+    <br>
 @stop
